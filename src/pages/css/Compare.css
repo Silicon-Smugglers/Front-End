@@ -41,7 +41,7 @@
 .MainContent {
   padding: 2rem;
   background-color: white;
-  border-radius: 50px;
+  border-radius: 25px;
   width: 100%;
   overflow: scroll;
 }
@@ -94,7 +94,7 @@
   background-color: white; /* Background color for the cart */
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 50px;
+  border-radius: 25px;
   border: 0;
   /* Add any other styles you want for the cart */
   overflow-y: scroll; /* Add vertical scroll if needed */
