@@ -56,7 +56,7 @@
     background-color: lightblue;
     border-radius: 25px;
     min-height: 50px;
-    width: 98%;
+    width: 100%;
     margin: 5px;
     padding: 15px;
     
@@ -66,10 +66,20 @@
     background-color: lightcoral;
     border-radius: 25px;
     min-height: 50px;
-    width: 98%;
+    width: 100%;
     margin: 5px;
     padding: 15px;
     
+}
+
+.severity {
+    background-color: lightgoldenrodyellow;
+    border-radius: 25px;
+    min-height: 50px;
+    width: 35%;
+    margin: 5px;
+    padding: 15px;
+
 }
 
 h2 {

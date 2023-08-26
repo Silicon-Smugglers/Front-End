@@ -60,12 +60,19 @@ const SearchBar = ({ searchQuery, setSearchQuery, onSearch }) => {
 
           </div>
 
-            <div className='known-issues'>
-              <h2>Known Issues</h2>
-            </div>
-            <div className='potential-risks'>
-              <h2>Potential Risks</h2>
-            </div>
+          <div style={{ display: "flex", flexDirection: "row", alignContent: "center", width: "98%",  placeContent: "space-evenly"}}>
+              <div style={{ width:"60%" }}>
+                <div className='known-issues'>
+                  <h2>Known Issues</h2>
+                </div>
+                <div className='potential-risks'>
+                  <h2>Potential Risks</h2>
+                </div>
+              </div>
+             <div className="severity"> <h2>Severity</h2> </div>
+
+          </div>
+
             <button onClick={closeModal} className='SearchContainerButton'>close</button>
 
         </div>
