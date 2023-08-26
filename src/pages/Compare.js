@@ -94,7 +94,7 @@ const Compare = () => {
               <div className="cart-content">
                 <span>{item}</span>
                 <button onClick={() => removeFromCart(item)} className="remove-button">
-                  🗑️{/* Bin symbol */}
+                ❌{/* Cross emoji */}
                 </button>
               </div>
             </div>
