@@ -13,7 +13,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+    <div style={{ display: "flex", flexDirection: "row", alignItems: "center", marginBottom: "10px" }}>
       <input
         type="text"
         placeholder="Search..."

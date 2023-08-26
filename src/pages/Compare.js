@@ -19,6 +19,9 @@ const Compare = () => {
   // State to hold the selected drugs in the cart
   const [cart, setCart] = useState([]);
 
+  // State to keep track of clicked tiles
+  const [clickedTiles, setClickedTiles] = useState([]);
+
   // Define the handleSearch function
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -26,7 +29,13 @@ const Compare = () => {
 
   // Define a function to add a drug to the cart
   const addToCart = (drug) => {
-    setCart([...cart, drug]);
+    // Check if the drug is already in the cart
+    if (!cart.includes(drug)) {
+      // If it's not in the cart, add it
+      setCart([...cart, drug]);
+      // Update the clickedTiles state to mark this tile as clicked
+      setClickedTiles([...clickedTiles, drug]);
+    }
   };
 
   // Define a function to remove a drug from the cart

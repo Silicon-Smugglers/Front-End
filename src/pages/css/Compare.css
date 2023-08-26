@@ -57,6 +57,17 @@
   border-radius: 45px;
   /* Add 3D shadow effect */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+/* Hover effect */
+.square-tile:hover {
+  background-color: rgb(99, 84, 84); /* Change the color on hover */
+}
+
+/* Clicked effect */
+.square-tile:active {
+  background-color: rgb(99, 84, 84); /* Change the color on click */
 }
 
 /* Style for tile content */
