@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
-import './css/Medication.css'; // Import your custom CSS for styling
+import './css/Compare.css'; // Import your custom CSS for styling
 import './css/SearchBar.css'
 
 const Medication = () => {

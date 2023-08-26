@@ -16,7 +16,7 @@ const SearchBar = ({ onSearch }) => {
     <div className='SearchContainer'>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Enter name of medication..."
         value={searchQuery}
         onChange={handleInputChange}
         style={{ marginRight: "15px" }}

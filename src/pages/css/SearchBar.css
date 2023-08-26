@@ -7,6 +7,10 @@
 
 }
 
+.SearchContainer input {
+    width: 100%; /* Set the input field to 100% width */
+  }  
+
 .SearchContainerButton {
     background-color: black;
     color: rgb(255, 255, 255);
