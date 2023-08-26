@@ -94,7 +94,6 @@ const Home = () => {
         </div>
       </nav>
 
-      
       {/*Login and Sign Up button*/}
       <div>
       <button className= "button1">Login</button>
