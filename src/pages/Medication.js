@@ -25,19 +25,21 @@ const Medication = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
 
-
   // Define the handleSearch function
   const handleSearch = (query) => {
     setSearchQuery(query);
   };
 
+    
   return (
     <div className='CompareContainer'>
+    <div className="rightbar">
+          <h2 style={{ borderBottom: "1px black solid", marginBottom: "10px"}}>Filters</h2>
+          <FilterBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+          
+      </div>
       <div className='MainContent'>
       <h1>All Medications</h1>
-
-        {/* Render the SearchBar component and pass the handleSearch function */}
-        <SearchBar onSearch={handleSearch} />
 
         {/* Display all drugs from the list as horizontally arranged square tiles */}
         <div className='CompareContent'>
@@ -64,4 +66,67 @@ const Medication = () => {
   );
 };
 
+
+const FilterBar = ({ searchQuery, setSearchQuery }) => {
+    const handleInputChange = (e) => {
+      setSearchQuery(e.target.value);
+    };
+  
+    const [checkboxStatus, setCheckboxStatus] = useState({
+      "oral": false,
+      "intraveneous": false,
+      "subcutaneous": false,
+      "nasal": false,
+      "topical": false
+    });
+  
+    const handleResetFilters = () => {
+      // Create a copy of the checkboxStatus object with all filters set to false
+      const resetStatus = Object.fromEntries(
+        Object.keys(checkboxStatus).map((key) => [key, false])
+      );
+      // Update the checkboxStatus state to reset all filters
+      setCheckboxStatus(resetStatus);
+    };
+  
+    return (
+      <div className='FilterBar'>
+        <input onChange={handleInputChange} value={searchQuery} style={{ marginBottom: "10px" }} />
+        <h2 style={{ borderBottom: "1px black solid", marginBottom: "10px" }}>Pathways</h2>
+        <Checkbox text="Oral" value="oral" checkboxStatus={checkboxStatus} setCheckboxStatus={setCheckboxStatus} />
+        <Checkbox text="Intravaneous" value="intravaneous" checkboxStatus={checkboxStatus} setCheckboxStatus={setCheckboxStatus} />
+        <Checkbox text="Subcutaneous" value="subcutaneous" checkboxStatus={checkboxStatus} setCheckboxStatus={setCheckboxStatus} />
+        <Checkbox text="Nasal" value="nasal" checkboxStatus={checkboxStatus} setCheckboxStatus={setCheckboxStatus} />
+        <Checkbox text="Topical" value="topical" checkboxStatus={checkboxStatus} setCheckboxStatus={setCheckboxStatus} />
+        <button className='SearchContainerButton' style={{ marginTop: "10px" }} onClick={handleResetFilters}>Reset</button>
+      </div>
+    );
+  };
+  
+
+
+const Checkbox = ({ text, value, checkboxStatus, setCheckboxStatus }) => {
+    const handleInputChange = (e) => {
+      let newStatus = { ...checkboxStatus }; // Create a copy of the checkboxStatus object
+  
+      // Update the value based on whether the checkbox is checked or unchecked
+      newStatus[value] = e.target.checked;
+  
+      // Update the checkboxStatus state
+      setCheckboxStatus(newStatus);
+    };
+  
+    return (
+      <div className="checkbox">
+        <input
+          type="checkbox"
+          checked={checkboxStatus[value]}
+          onChange={handleInputChange}
+          style={{ marginRight: "10px", marginTop: "0.3em" }}
+        />
+        {text}
+      </div>
+    );
+  };
+  
 export default Medication;

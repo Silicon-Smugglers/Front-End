@@ -59,7 +59,7 @@ const Compare = () => {
       
 
           {/* Render the SearchBar component and pass the handleSearch function */}
-          <SearchBar onSearch={handleSearch} />
+          <SearchBar onSearch={handleSearch} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
 
           {/* Display all drugs from the list as horizontally arranged square tiles */}
           <div className='CompareContent'>
@@ -93,8 +93,8 @@ const Compare = () => {
             <div key={index} className="cart-item">
               <div className="cart-content">
                 <span>{item}</span>
-                <button onClick={() => removeFromCart(item)} className="remove-button">
-                  🗑️{/* Bin symbol */}
+                <button onClick={() => removeFromCart(item)} className="remove-button" style={{ fontSize: '10px' }}>
+                ❌{/* Cross emoji */}
                 </button>
               </div>
             </div>
