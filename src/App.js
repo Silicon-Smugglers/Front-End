@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Compare from './pages/Compare';
 import Medication from './pages/Medication';
-import NavBar from "./components/NavBar";
+import NavBar from "./Components/NavBar";
 
 const App = () => {
  return (
