@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import "./css/SearchBar.css"
 import Modal from 'react-modal';
 
@@ -17,17 +18,32 @@ const customStyles = {
   },
 };
 
-const SearchBar = ({ searchQuery, setSearchQuery, onSearch }) => {
+const SearchBar = ({ searchQuery, setSearchQuery, onSearch, finishedCart }) => {
   // const [searchQuery, setSearchQuery] = useState('');
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
-  const handleInputChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
+    const handleInputChange = (e) => {
+        setSearchQuery(e.target.value);
+    };
 
-  const handleSearch = () => {
-    onSearch(searchQuery);
-  };
+    const handleSearch = () => {
+        onSearch(searchQuery);
+    };
+
+    const handleFinish = () => {
+        // Create list of ids from list of (doc.id, doc) tuples
+        const idList = finishedCart.map(function(tuple) {
+            return tuple[0];
+        });
+        // send to server to compare
+        const data = { 'cart': idList };
+        axios.post('/compare', data)
+            .then((response) => {
+                console.log(response.data);
+            }
+        );
+    };
+
 
   function openModal() {
     setIsOpen(true);
@@ -45,9 +61,9 @@ const SearchBar = ({ searchQuery, setSearchQuery, onSearch }) => {
         value={searchQuery}
         onChange={handleInputChange}
         style={{ marginRight: "15px" }}
-      />
+        />
+        <button className='SearchContainerButton' onClick={() => {handleFinish(); openModal();}}>Finish</button>
       {/* <button className='SearchContainerButton' onClick={handleSearch}>Search</button> */}
-      <button className='SearchContainerBut1ton' onClick={openModal}>Finish</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
