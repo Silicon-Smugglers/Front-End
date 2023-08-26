@@ -7,12 +7,15 @@ const NavBar = () => {
   let [selected, setSelected] = useState({"Home": true, "Medications": false, "Compare": false})
 
   return (
-    <div>
+    <div className="NavigationBarContainer">
         <div className="NavigationBar"> 
             <NavBarItem item="Medications" selected={selected} setSelected={setSelected} route="/medications" />
             <NavBarItem home={true} item="Home" selected={selected} setSelected={setSelected} route="/"/>
             <NavBarItem item="Compare" selected={selected} setSelected={setSelected} route="/compare"/>
         </div>
+        <button style={{borderRadius: "9999px"}}>
+                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""></img>
+        </button>
     </div>
   );
 };
