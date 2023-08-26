@@ -4,7 +4,9 @@
   justify-content: space-between;
   margin-left: 4rem;
   margin-right: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  min-height: 70vh;
+  max-height: 80vh;
 }
 
 .CompareContainer h1 {
@@ -33,10 +35,15 @@
 .CompareContent {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .MainContent {
+  padding: 2rem;
   background-color: white;
+  border-radius: 50px;
+  width: 100%;
+  overflow: scroll;
 }
 
 .tile-container {
@@ -52,10 +59,10 @@
 
 /* Style for square tiles */
 .square-tile {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: 10px;
-  background-color: #0c1a3c;
+  background-color: #e43d27;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,13 +91,15 @@
 /* Style for the cart */
 .sidebar {
   width: 20vw; /* Adjust the width as needed */
-  background-color: #f0f0f0; /* Background color for the cart */
+  background-color: white; /* Background color for the cart */
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 50px;
+  border: 0;
   /* Add any other styles you want for the cart */
-  height: 100; /* Make it full height of the viewport */
-  overflow-y: auto; /* Add vertical scroll if needed */
+  overflow-y: scroll; /* Add vertical scroll if needed */
+  margin-left: 3rem;
+  padding-top: 1rem;
 }
 
 .cart-content {

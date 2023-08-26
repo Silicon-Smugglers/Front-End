@@ -22,6 +22,7 @@ const SearchBar = ({ onSearch }) => {
         style={{ marginRight: "15px" }}
       />
       <button className='SearchContainerButton' onClick={handleSearch}>Search</button>
+      <button className='SearchContainerButton'>Finish</button>
     </div>
   );
 };
