@@ -1,21 +1,113 @@
+.CompareContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+}
+
+.CompareContainer h1 {
+  font-size: x-large;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.CompareContainer h2 {
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.CompareContainer input {
+  outline: none;
+  width: auto;
+  /* border: 0; */
+  border-bottom: 2px solid black;
+  padding: 8px;
+  background: none;
+}
+
+.CompareContent {
+  display: flex;
+  justify-content: center;
+}
+
+.MainContent {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 50px;
+}
+
 .tile-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
+  display: flex;
+  flex-wrap: wrap;
+}
   
+  /* Style for the tile container */
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style for square tiles */
 .square-tile {
-    width: 200px; /* Adjust the width to make it square */
-    height: 200px; /* Same height as width to create a square */
-    margin: 10px; /* Adjust margin as needed for spacing */
-    background-color: #cfa055; /* Background color for the tile */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc; /* Add a border for styling */
-  }
-  
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #0c1a3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc; /* Add a border for styling */
+  border-radius: 50px;
+  /* Add 3D shadow effect */
+  box-shadow: 5px 5px lightblue;
+  color: white;
+}
+
+/* Hover effect */
+.square-tile:hover {
+  background-color: rgb(99, 84, 84); /* Change the color on hover */
+}
+
+/* Clicked effect */
+.square-tile:active {
+  background-color: rgb(99, 84, 84); /* Change the color on click */
+}
+
+/* Style for tile content */
 .tile-content {
-    text-align: center;
-  }
-  
+  text-align: center;
+}
+
+/* Style for the cart */
+.sidebar {
+  width: 20vw; /* Adjust the width as needed */
+  background-color: white; /* Background color for the cart */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  border: 0;
+  /* Add any other styles you want for the cart */
+  height: 100; /* Make it full height of the viewport */
+  overflow-y: auto; /* Add vertical scroll if needed */
+  margin-left: 3rem;
+  padding-top: 1rem;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(211, 201, 201);
+  border-radius: 10px;;
+}

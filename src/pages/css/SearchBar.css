@@ -1,0 +1,29 @@
+.SearchContainer {
+ display: flex; 
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 10px; 
+
+}
+
+.SearchContainer input {
+    width: 100%; /* Set the input field to 100% width */
+  }  
+
+.SearchContainerButton {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: none;
+    border: 0;
+}
+
+.SearchContainerButton:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(99, 84, 84);
+}
+

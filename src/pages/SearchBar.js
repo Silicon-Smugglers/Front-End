@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./css/SearchBar.css"
 
 const SearchBar = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -12,14 +13,15 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div>
+    <div className='SearchContainer'>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Enter name of medication..."
         value={searchQuery}
         onChange={handleInputChange}
+        style={{ marginRight: "15px" }}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className='SearchContainerButton' onClick={handleSearch}>Search</button>
     </div>
   );
 };
