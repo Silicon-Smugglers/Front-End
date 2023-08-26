@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/home.css"
-import { ColorChangingButton } from "../Components/ColourChangingButton";
+import { ColorChangingButton } from "../components/ColourChangingButton";
 const Home = () => {
 
   return (
