@@ -1,4 +1,12 @@
-button {
+.SearchContainer {
+ display: flex; 
+ flex-direction: row;
+ align-items: center;
+ margin-bottom: 10px; 
+
+}
+
+.SearchContainerButton {
     background-color: black;
     color: rgb(255, 255, 255);
     padding: 8px;
@@ -9,7 +17,7 @@ button {
     border: 0;
 }
 
-button:hover {
+.SearchContainerButton:hover {
     color: rgb(255, 255, 255);
     background-color: rgb(99, 84, 84);
 }

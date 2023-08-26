@@ -13,7 +13,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", alignItems: "center", marginBottom: "10px" }}>
+    <div className='SearchContainer'>
       <input
         type="text"
         placeholder="Search..."
@@ -21,7 +21,7 @@ const SearchBar = ({ onSearch }) => {
         onChange={handleInputChange}
         style={{ marginRight: "15px" }}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className='SearchContainerButton' onClick={handleSearch}>Search</button>
     </div>
   );
 };
