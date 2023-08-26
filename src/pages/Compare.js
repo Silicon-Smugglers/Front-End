@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import './css/Compare.css'; // Import your custom CSS for styling
-// Import FontAwesomeIcon and the specific icon you want to use
 
 const Compare = () => {
   const drugData = [
@@ -20,27 +19,30 @@ const Compare = () => {
   // State to hold the selected drugs in the cart
   const [cart, setCart] = useState([]);
 
+  // State to keep track of clicked tiles
+  const [clickedTiles, setClickedTiles] = useState([]);
+
   // Define the handleSearch function
   const handleSearch = (query) => {
     setSearchQuery(query);
   };
 
   // Define a function to add a drug to the cart
-const addToCart = (drug) => {
+  const addToCart = (drug) => {
     // Check if the drug is already in the cart
     if (!cart.includes(drug)) {
       // If it's not in the cart, add it
       setCart([...cart, drug]);
+      // Update the clickedTiles state to mark this tile as clicked
+      setClickedTiles([...clickedTiles, drug]);
     }
   };
-  
 
   // Define a function to remove a drug from the cart
   const removeFromCart = (item) => {
     const updatedCart = cart.filter((drug) => drug !== item);
     setCart(updatedCart);
   };
-
 
   return (
     <div className='CompareContainer'>
@@ -56,7 +58,7 @@ const addToCart = (drug) => {
             // Conditionally render only the matching tile based on the search query
             drug.toLowerCase().includes(searchQuery.toLowerCase()) && (
               <div
-                className="square-tile"
+                className={`square-tile ${clickedTiles.includes(drug) ? 'clicked' : ''}`}
                 key={index}
                 onClick={() => addToCart(drug)} // Add this onClick handler
               >

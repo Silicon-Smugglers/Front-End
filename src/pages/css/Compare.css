@@ -1,29 +1,5 @@
-.CompareContainer {
-  padding: 2rem;
-}
-
-.CompareContainer h1 {
-  font-size: x-large;
-  font-weight: 600;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.CompareContainer input {
-  outline: none;
-  width: auto;
-  /* border: 0; */
-  border-bottom: 2px solid black;
-  padding: 8px;
-  background: none;
-}
-
-.CompareContent {
-  display: flex;
-  justify-content: center;
-}
-
-.tile-container {
+/* Style for the container that holds both tiles and the cart */
+.content-container {
     display: flex;
     flex-wrap: wrap;
   }
@@ -35,7 +11,7 @@
   }
   
   /* Style for square tiles */
-  .square-tile {
+.square-tile {
     width: 200px;
     height: 300px;
     margin: 10px;
@@ -43,11 +19,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ccc; /* Add a border for styling */
+    border: 1px solid #ccc;
     border-radius: 45px;
-    /* Add 3D shadow effect */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
-}
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Add cursor pointer to indicate clickable */
+    transition: background-color 0.3s ease; /* Add smooth transition */
+  }
+  
+  /* Hover effect */
+  .square-tile:hover {
+    background-color: rgb(99, 84, 84); /* Change the color on hover */
+  }
+  
+  /* Clicked effect */
+  .square-tile:active {
+    background-color: rgb(99, 84, 84); /* Change the color on click */
+  }
+  
   
   /* Style for tile content */
   .tile-content {
@@ -64,7 +52,7 @@
     /* Add any other styles you want for the cart */
   
     position: fixed; /* Set the position to fixed */
-    top: 70px; /* Position it at the top */
+    top: 0px; /* Position it at the top */
     right: 0; /* Position it at the right */
     height: 100%; /* Make it full height of the viewport */
     overflow-y: auto; /* Add vertical scroll if needed */
