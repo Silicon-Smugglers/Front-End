@@ -5,6 +5,7 @@ import Profile from './pages/Profile';
 import Compare from './pages/Compare';
 import Medication from './pages/Medication';
 
+
 const App = () => {
  return (
     <>
