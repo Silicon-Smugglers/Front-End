@@ -23,7 +23,7 @@
 }
 
 .NavigationBarItem {
-    color: rgb(255, 255, 255);
+    color: black;
     padding: 8px;
     border-radius: 5px;
     margin-left: 5px;
@@ -40,5 +40,6 @@
 
 
 .NavigationBarItem.Selected {
-    background-color: rgb(239 68 68) ;
+    background-color: rgb(239 68 68);
+    color: white;
 }
