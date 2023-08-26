@@ -108,7 +108,6 @@ const Compare = () => {
                 </button>
               </div>
             </div>
-            </div>
         ))}
         </div>
         </div>
