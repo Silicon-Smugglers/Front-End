@@ -77,7 +77,7 @@
   /* Hover effect */
   .square-tile:hover {
     background-color: rgb(99, 84, 84); /* Change the color on hover */
-    transform: scale(1.1); /* Scale the tile slightly on hover */
+    transform: scale(1.02); /* Scale the tile slightly on hover */
   }
   
   /* Clicked effect */

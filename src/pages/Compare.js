@@ -93,8 +93,8 @@ const Compare = () => {
             <div key={index} className="cart-item">
               <div className="cart-content">
                 <span>{item}</span>
-                <button onClick={() => removeFromCart(item)} className="remove-button">
-                  🗑️{/* Bin symbol */}
+                <button onClick={() => removeFromCart(item)} className="remove-button" style={{ fontSize: '10px' }}>
+                ❌{/* Cross emoji */}
                 </button>
               </div>
             </div>
