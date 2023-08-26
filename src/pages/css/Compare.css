@@ -8,7 +8,7 @@
     width: 200px; /* Adjust the width to make it square */
     height: 300px; /* Same height as width to create a square */
     margin: 10px; /* Adjust margin as needed for spacing */
-    background-color: #cfa055; /* Background color for the tile */
+    background-color: #0c1a3c; /* Background color for the tile */
     display: flex;
     justify-content: center;
     align-items: center;

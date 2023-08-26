@@ -29,6 +29,12 @@ const Compare = () => {
     setCart([...cart, drug]);
   };
 
+  // Define a function to remove a drug from the cart
+  const removeFromCart = (item) => {
+    const updatedCart = cart.filter((drug) => drug !== item);
+    setCart(updatedCart);
+  };
+
   return (
     <div>
       <h1>Drug Comparison</h1>
@@ -60,11 +66,12 @@ const Compare = () => {
       {/* Display the cart on the sidebar */}
       <div className="sidebar">
         <h2>Cart</h2>
-        <ul>
-          {cart.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+        {cart.map((item, index) => (
+          <div key={index} className="cart-item">
+            <div>{item}</div>
+            <button onClick={() => removeFromCart(item)}>Remove</button>
+          </div>
+        ))}
       </div>
     </div>
   );
