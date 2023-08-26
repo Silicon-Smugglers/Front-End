@@ -59,7 +59,7 @@ const Compare = () => {
       
 
           {/* Render the SearchBar component and pass the handleSearch function */}
-          <SearchBar onSearch={handleSearch} />
+          <SearchBar onSearch={handleSearch} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
 
           {/* Display all drugs from the list as horizontally arranged square tiles */}
           <div className='CompareContent'>

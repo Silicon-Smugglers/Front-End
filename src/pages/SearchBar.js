@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import "./css/SearchBar.css"
 
-const SearchBar = ({ onSearch }) => {
-  const [searchQuery, setSearchQuery] = useState('');
+const SearchBar = ({ searchQuery, setSearchQuery, onSearch }) => {
+  // const [searchQuery, setSearchQuery] = useState('');
 
   const handleInputChange = (e) => {
     setSearchQuery(e.target.value);
@@ -21,7 +21,7 @@ const SearchBar = ({ onSearch }) => {
         onChange={handleInputChange}
         style={{ marginRight: "15px" }}
       />
-      <button className='SearchContainerButton' onClick={handleSearch}>Search</button>
+      {/* <button className='SearchContainerButton' onClick={handleSearch}>Search</button> */}
       <button className='SearchContainerButton'>Finish</button>
     </div>
   );

@@ -114,6 +114,22 @@
   padding-top: 1rem;
 }
 
+.rightbar {
+  display: flex;
+  width: 20vw; /* Adjust the width as needed */
+  background-color: white; /* Background color for the cart */
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  align-items: center;
+  border: 0;
+  /* Add any other styles you want for the cart */
+  overflow-y: scroll; /* Add vertical scroll if needed */
+  margin-right: 3rem;
+  padding-top: 1rem;
+}
+
 .cart-content {
   display: flex;
   flex-direction: row;
@@ -129,3 +145,21 @@
   border-radius: 10px;;
 }
 
+.FilterBar {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type='checkbox'] {
+  height: 1rem;
+  width: 1rem;
+  margin: 8px;
+  accent-color: black;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
