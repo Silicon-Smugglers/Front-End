@@ -62,7 +62,7 @@
   border: 1px solid #ccc; /* Add a border for styling */
   border-radius: 45px;
   /* Add 3D shadow effect */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
+  
   color: white;
 }
 
