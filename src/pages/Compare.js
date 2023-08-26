@@ -63,15 +63,19 @@ const Compare = () => {
         </div>
       </div>
 
-      {/* Display the cart on the sidebar */}
+      {/* Move the cart to the right side */}
       <div className="sidebar">
-        <h2>Cart</h2>
-        {cart.map((item, index) => (
-          <div key={index} className="cart-item">
-            <div>{item}</div>
-            <button onClick={() => removeFromCart(item)}>Remove</button>
-          </div>
-        ))}
+          <h2>Cart</h2>
+          {cart.map((item, index) => (
+            <div key={index} className="cart-item">
+              <div className="cart-content">
+                <span>{item}</span>
+                <button onClick={() => removeFromCart(item)} className="remove-button">
+                  🗑️{/* Bin symbol */}
+                </button>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
   );
