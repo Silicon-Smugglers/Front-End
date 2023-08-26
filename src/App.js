@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 
 const App = () => {
  return (
-    <>
+    <div style={{ backgroundColor:"#ECE2E2"}}>
       <NavBar />
        <Routes>
           <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/compare" element={<Compare />} />
           <Route path="/medications" element={<Medication />} />
        </Routes>
-    </>
+    </div>
  );
 };
 

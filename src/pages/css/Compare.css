@@ -47,16 +47,16 @@
 /* Style for square tiles */
 .square-tile {
   width: 200px;
-  height: 300px;
+  height: 200px;
   margin: 10px;
   background-color: #0c1a3c;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #ccc; /* Add a border for styling */
-  border-radius: 45px;
+  border-radius: 50px;
   /* Add 3D shadow effect */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px lightblue;
   color: white;
 }
 
@@ -77,7 +77,7 @@
 
 /* Style for the cart */
 .sidebar {
-  width: 13vw; /* Adjust the width as needed */
+  width: 20vw; /* Adjust the width as needed */
   background-color: #f0f0f0; /* Background color for the cart */
   padding: 10px;
   border: 1px solid #ccc;

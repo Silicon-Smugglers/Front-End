@@ -1,6 +1,7 @@
 .NavigationBarContainer {
-    background-color: rgb(17, 24, 39);
     padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;;
     display: flex;
     flex-direction: row;
