@@ -55,7 +55,7 @@ const Compare = () => {
   return (
     <div className='CompareContainer'>
       <div className='MainContent'>
-      <h1>Drug Comparison</h1>
+      
 
         {/* Render the SearchBar component and pass the handleSearch function */}
         <SearchBar onSearch={handleSearch} />
