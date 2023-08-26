@@ -11,6 +11,13 @@ const Compare = () => {
     'Lisinopril',
     'Simvastatin',
     'Metformin',
+    'Valproic Acid',
+    'Benzodiazepines',
+    'Tylenol',
+    'Vitamin K',
+    'Warfarin',
+    'Oral Contraceptives',
+    'NSAIDs'
     // Add more drug names as needed
   ];
 
