@@ -4,7 +4,7 @@
   justify-content: space-between;
   margin-left: 4rem;
   margin-right: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .CompareContainer h1 {
@@ -36,7 +36,9 @@
 }
 
 .MainContent {
+  padding: 2rem;
   background-color: white;
+  border-radius: 50px;
 }
 
 .tile-container {
@@ -84,13 +86,16 @@
 /* Style for the cart */
 .sidebar {
   width: 20vw; /* Adjust the width as needed */
-  background-color: #f0f0f0; /* Background color for the cart */
+  background-color: white; /* Background color for the cart */
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 30px;
+  border: 0;
   /* Add any other styles you want for the cart */
   height: 100; /* Make it full height of the viewport */
   overflow-y: auto; /* Add vertical scroll if needed */
+  margin-left: 3rem;
+  padding-top: 1rem;
 }
 
 .cart-content {
