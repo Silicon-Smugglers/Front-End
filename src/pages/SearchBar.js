@@ -47,7 +47,7 @@ const SearchBar = ({ searchQuery, setSearchQuery, onSearch }) => {
         style={{ marginRight: "15px" }}
       />
       {/* <button className='SearchContainerButton' onClick={handleSearch}>Search</button> */}
-      <button className='SearchContainerButton' onClick={openModal}>Finish</button>
+      <button className='SearchContainerBut1ton' onClick={openModal}>Finish</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -59,6 +59,7 @@ const SearchBar = ({ searchQuery, setSearchQuery, onSearch }) => {
             <h2>Results</h2>
 
           </div>
+
             <div className='known-issues'>
               <h2>Known Issues</h2>
             </div>
