@@ -65,6 +65,8 @@ const Compare = () => {
         <div className='MainContent'>
         <div className='scroll'>
 
+          {/* Render the SearchBar component and pass the handleSearch function */}
+          <SearchBar onSearch={handleSearch} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
 
         {/* Render the SearchBar component and pass the handleSearch function */}
         <SearchBar onSearch={handleSearch} finishedCart={cart}/>
@@ -94,16 +96,17 @@ const Compare = () => {
         </div>
         </div>
 
-        {/* Move the cart to the right side */}
-        <div className="sidebar">
-        <h2 style={{ borderBottom: "1px black solid", marginBottom: "10px"}}>Prescriptions</h2>
-        {cart.map((item, index) => (
-            <div key={item[0]} className="cart-item">
-            <div className="cart-content">
-            <span>{item[1].name}</span>
-            <button onClick={() => removeFromCart(item)} className="remove-button">
-            🗑️{/* Bin symbol */}
-            </button>
+      {/* Move the cart to the right side */}
+      <div className="sidebar">
+          <h2 style={{ borderBottom: "1px black solid", marginBottom: "10px"}}>Prescriptions</h2>
+          {cart.map((item, index) => (
+            <div key={index[0]} className="cart-item">
+              <div className="cart-content">
+                <span>{item[1].name}</span>
+                <button onClick={() => removeFromCart(item)} className="remove-button" style={{ fontSize: '10px' }}>
+                ❌{/* Cross emoji */}
+                </button>
+              </div>
             </div>
             </div>
         ))}
