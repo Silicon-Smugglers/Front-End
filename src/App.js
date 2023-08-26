@@ -8,12 +8,12 @@ import NavBar from "./components/NavBar";
 
 const App = () => {
  return (
-    <div style={{ backgroundColor:"#ECE2E2", minHeight: "100vh", paddingBottom: "2rem"}}>
+    <div style={{ backgroundColor:"#ECE2E2", minHeight: "100vh", paddingBottom: "2rem" }} className='font-bold'>
       <NavBar />
        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/compare" element={<Compare />} />
+          <Route path="/compare" elementkk={<Compare />} />
           <Route path="/medications" element={<Medication />} />
        </Routes>
     </div>
