@@ -24,6 +24,7 @@ const Home = () => {
           </ColorChangingButton>
         </div>
         </div>  
+
         <div className=" ablsolute top-0 left-0 h-5/6 w-5/6 bg-red-500 shadow-xl transform rotate-3 origin-left justify-center items-center flex flex-col"
         style={{ marginLeft: "-2%", left: '%' }} // Adjust the left positioning here>
        ><h1 className= "mb-4 text-4xl font-extrabold leading-none tracking-tight bg-center text-gray-0 md:text-5xl lg:text-6xl dark:text-white"
@@ -41,6 +42,23 @@ const Home = () => {
           <img src={"../../blue_pill_bottle.svg" } alt="" className="max-w-full h-auto max-h-64" />
           </div>
         </div>
+
+        <div className="absolute left-0 h-full w-full flex flex-col items-center justify-center">
+        <div className=" h-1/2 w-full flex justify-center items-end">
+          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight bg-center text-gray-900 md:text-5xl lg:text-6xl dark:text-black"
+          >
+            Nothing to put Here
+          </h1>
+
+        </div>
+        <div
+            className="h-1/2 align-bottom w-full bg-red-500 flex justify-center "
+            style={{bottom: "-2rem"}}
+            >
+            <p className="font-bold text-gray-50 dark:text-white">here 2</p>
+
+        </div>
+      </div>
       </div>
   );
 };

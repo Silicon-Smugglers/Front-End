@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 
 const App = () => {
  return (
-    <div style={{ backgroundColor:"#ECE2E2", minHeight: "100vh", paddingBottom: "2rem" }} className='font-bold'>
+    <div style={{ backgroundColor:"#ECE2E2", minHeight: "100vh" }} className='font-bold'>
       <NavBar />
        <Routes>
           <Route path="/" element={<Home />} />
