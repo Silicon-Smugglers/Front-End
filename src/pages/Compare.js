@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
+import './css/Compare.css'; // Import your custom CSS for styling
 
 const Compare = () => {
   const drugData = [
@@ -12,20 +13,20 @@ const Compare = () => {
     // Add more drug names as needed
   ];
 
-  // State to hold the search results
-  const [searchResults, setSearchResults] = useState([]);
+  // State to hold the search query
+  const [searchQuery, setSearchQuery] = useState('');
 
-  // Define the search logic function
-  const yourSearchLogic = (query) => {
-    return drugData.filter((drug) =>
-      drug.toLowerCase().includes(query.toLowerCase())
-    );
-  };
+  // State to hold the selected drugs in the cart
+  const [cart, setCart] = useState([]);
 
   // Define the handleSearch function
   const handleSearch = (query) => {
-    const filteredResults = yourSearchLogic(query);
-    setSearchResults(filteredResults);
+    setSearchQuery(query);
+  };
+
+  // Define a function to add a drug to the cart
+  const addToCart = (drug) => {
+    setCart([...cart, drug]);
   };
 
   return (
@@ -35,12 +36,33 @@ const Compare = () => {
       {/* Render the SearchBar component and pass the handleSearch function */}
       <SearchBar onSearch={handleSearch} />
 
-      {/* Display search results */}
-      <div>
-        <h2>Search Results:</h2>
+      {/* Display all drugs from the list as horizontally arranged square tiles */}
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className="tile-container">
+          {drugData.map((drug, index) => (
+            // Conditionally render only the matching tile based on the search query
+            drug.toLowerCase().includes(searchQuery.toLowerCase()) && (
+              <div
+                className="square-tile"
+                key={index}
+                onClick={() => addToCart(drug)} // Add this onClick handler
+              >
+                <div className="tile-content">
+                  <h5 className="tile-title">{drug}</h5>
+                  {/* Additional drug information or actions can be added here */}
+                </div>
+              </div>
+            )
+          ))}
+        </div>
+      </div>
+
+      {/* Display the cart on the sidebar */}
+      <div className="sidebar">
+        <h2>Cart</h2>
         <ul>
-          {searchResults.map((result, index) => (
-            <li key={index}>{result}</li>
+          {cart.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
       </div>
