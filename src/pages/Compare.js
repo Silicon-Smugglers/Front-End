@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import './css/Compare.css'; // Import your custom CSS for styling
+// Import FontAwesomeIcon and the specific icon you want to use
 
 const Compare = () => {
   const drugData = [
@@ -25,15 +26,21 @@ const Compare = () => {
   };
 
   // Define a function to add a drug to the cart
-  const addToCart = (drug) => {
-    setCart([...cart, drug]);
+const addToCart = (drug) => {
+    // Check if the drug is already in the cart
+    if (!cart.includes(drug)) {
+      // If it's not in the cart, add it
+      setCart([...cart, drug]);
+    }
   };
+  
 
   // Define a function to remove a drug from the cart
   const removeFromCart = (item) => {
     const updatedCart = cart.filter((drug) => drug !== item);
     setCart(updatedCart);
   };
+
 
   return (
     <div>
