@@ -43,14 +43,14 @@ const addToCart = (drug) => {
 
 
   return (
-    <div>
+    <div className='CompareContainer'>
       <h1>Drug Comparison</h1>
 
       {/* Render the SearchBar component and pass the handleSearch function */}
       <SearchBar onSearch={handleSearch} />
 
       {/* Display all drugs from the list as horizontally arranged square tiles */}
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className='CompareContent'>
         <div className="tile-container">
           {drugData.map((drug, index) => (
             // Conditionally render only the matching tile based on the search query
