@@ -3,12 +3,10 @@
  flex-direction: row;
  align-items: center;
  justify-content: center;
+ width: 100vw;
  margin-bottom: 10px; 
 }
 
-.SearchContainer input {
-    width: 100%; /* Set the input field to 100% width */
-  }  
 
 .SearchContainerButton {
     background-color: black;
