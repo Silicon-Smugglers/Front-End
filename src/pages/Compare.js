@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import './css/Compare.css'; // Import your custom CSS for styling
+import './css/SearchBar.css'
 
 const Compare = () => {
   const drugData = [
@@ -73,11 +74,13 @@ const Compare = () => {
           </div>
         </div>
 
+        <button className='SearchContainerButton'>Finish</button>
+
       </div>
 
       {/* Move the cart to the right side */}
       <div className="sidebar">
-          <h2>Cart</h2>
+          <h2 style={{ borderBottom: "1px black solid", marginBottom: "10px"}}>Prescriptions</h2>
           {cart.map((item, index) => (
             <div key={index} className="cart-item">
               <div className="cart-content">
