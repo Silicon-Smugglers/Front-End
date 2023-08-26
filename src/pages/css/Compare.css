@@ -1,9 +1,19 @@
 .CompareContainer {
   padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .CompareContainer h1 {
   font-size: x-large;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.CompareContainer h2 {
+  font-size: large;
   font-weight: 600;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -24,49 +34,44 @@
 }
 
 .tile-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  /* Style for the tile container */
-  .tile-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  /* Style for square tiles */
-  .square-tile {
-    width: 200px;
-    height: 300px;
-    margin: 10px;
-    background-color: #0c1a3c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc; /* Add a border for styling */
-    border-radius: 45px;
-    /* Add 3D shadow effect */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
 }
   
-  /* Style for tile content */
-  .tile-content {
-    text-align: center;
-  }
-  
-  /* Style for the cart */
-  .sidebar {
-    width: 200px; /* Adjust the width as needed */
-    background-color: #f0f0f0; /* Background color for the cart */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    /* Add any other styles you want for the cart */
-  
-    position: fixed; /* Set the position to fixed */
-    top: 70px; /* Position it at the top */
-    right: 0; /* Position it at the right */
-    height: 100%; /* Make it full height of the viewport */
-    overflow-y: auto; /* Add vertical scroll if needed */
-  }
-  
+  /* Style for the tile container */
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style for square tiles */
+.square-tile {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  background-color: #0c1a3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc; /* Add a border for styling */
+  border-radius: 45px;
+  /* Add 3D shadow effect */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for tile content */
+.tile-content {
+  text-align: center;
+}
+
+/* Style for the cart */
+.sidebar {
+  width: 13vw; /* Adjust the width as needed */
+  background-color: #f0f0f0; /* Background color for the cart */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  /* Add any other styles you want for the cart */
+  height: 100; /* Make it full height of the viewport */
+  overflow-y: auto; /* Add vertical scroll if needed */
+}

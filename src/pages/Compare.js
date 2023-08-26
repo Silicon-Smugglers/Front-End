@@ -37,30 +37,33 @@ const Compare = () => {
 
   return (
     <div className='CompareContainer'>
+      <div className='MainContent'>
       <h1>Drug Comparison</h1>
 
-      {/* Render the SearchBar component and pass the handleSearch function */}
-      <SearchBar onSearch={handleSearch} />
+        {/* Render the SearchBar component and pass the handleSearch function */}
+        <SearchBar onSearch={handleSearch} />
 
-      {/* Display all drugs from the list as horizontally arranged square tiles */}
-      <div className='CompareContent'>
-        <div className="tile-container">
-          {drugData.map((drug, index) => (
-            // Conditionally render only the matching tile based on the search query
-            drug.toLowerCase().includes(searchQuery.toLowerCase()) && (
-              <div
-                className="square-tile"
-                key={index}
-                onClick={() => addToCart(drug)} // Add this onClick handler
-              >
-                <div className="tile-content">
-                  <h5 className="tile-title">{drug}</h5>
-                  {/* Additional drug information or actions can be added here */}
+        {/* Display all drugs from the list as horizontally arranged square tiles */}
+        <div className='CompareContent'>
+          <div className="tile-container">
+            {drugData.map((drug, index) => (
+              // Conditionally render only the matching tile based on the search query
+              drug.toLowerCase().includes(searchQuery.toLowerCase()) && (
+                <div
+                  className="square-tile"
+                  key={index}
+                  onClick={() => addToCart(drug)} // Add this onClick handler
+                >
+                  <div className="tile-content">
+                    <h5 className="tile-title">{drug}</h5>
+                    {/* Additional drug information or actions can be added here */}
+                  </div>
                 </div>
-              </div>
-            )
-          ))}
+              )
+            ))}
+          </div>
         </div>
+
       </div>
 
       {/* Move the cart to the right side */}
