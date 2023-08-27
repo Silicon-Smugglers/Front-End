@@ -70,7 +70,7 @@ const Home = () => {
             className="h-1/2 align-bottom w-full bg-red-500 text-center  justify-center flex flex-col"
             style={{bottom: "-2rem"}}
             >
-            <p className="font-extrabold text-gray-50 dark:text-white">
+            <p className="font-extrabold text-gray-50 dark:text-white w-1/2">
               Hence, the solution. This website help you to choose and compare 2 drugs giving you information about how the drugs will affect each other, 
               and how they affect you.          
                </p>
